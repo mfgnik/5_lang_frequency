@@ -2,8 +2,8 @@ import collections
 
 def load_data(filepath):
     text = []
-    with open(filepath, 'r', encoding='utf-8') as f:
-        for line in f:
+    with open(filepath, 'r', encoding='utf-8') as our_file:
+        for line in our_file:
             text.extend(line.split())
     return text
 
