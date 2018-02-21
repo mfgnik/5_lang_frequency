@@ -1,6 +1,6 @@
 # Frequency Analysis of Words
 
-[TODO. There will be project description]
+This program finds ten most frequent words in text
 
 # Project Goals
 
