@@ -3,8 +3,8 @@ import sys
 
 
 def load_data(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return f.read()
+    with open(filepath, 'r', encoding='utf-8') as file_with_text:
+        return file_with_text.read()
 
 
 def get_most_frequent_words(list_of_words):
