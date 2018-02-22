@@ -1,20 +1,21 @@
 import collections
+import sys
+
 
 def load_data(filepath):
-    text = []
-    with open(filepath, 'r', encoding='utf-8') as our_file:
-        for line in our_file:
-            text.extend(line.split())
-    return text
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return f.read()
 
 
-def get_most_frequent_words(text):
+def file_to_list(f):
+    return f.split()
+
+
+def get_most_frequent_words(list_of_words):
     amount_of_words = 10
-    counter = collections.Counter()
-    for word in text:
-        counter[word] += 1
-    return counter.most_common(amount_of_words)
+    counter = collections.Counter(list_of_words)
+    return dict(counter.most_common(amount_of_words)).keys()
 
 if __name__ == '__main__':
-    file_path = input()
-    print(*(word[0] for word in get_most_frequent_words(load_data(file_path))))
+    file_path = ' '.join(sys.argv[1:])
+    print(*get_most_frequent_words(file_to_list(load_data(file_path))))
