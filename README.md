@@ -4,7 +4,7 @@ This program finds ten most frequent words in text
 
 Example of using code on Mac OS:
 
-```
+```bash
 cd PycharmProjects/Devman
 python lang_frequency.py input.txt
 ```
