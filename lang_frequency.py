@@ -14,5 +14,5 @@ def get_most_frequent_words(text):
 
 
 if __name__ == '__main__':
-    file_path = ' '.join(sys.argv[1:])
+    file_path = ' '.join(sys.argv[1])
     print(*(word for word in get_most_frequent_words(load_data(file_path))))
