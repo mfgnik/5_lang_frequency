@@ -7,9 +7,9 @@ def load_data(filepath):
         return file_with_text.read()
 
 
-def get_most_frequent_words(list_of_words):
+def get_most_frequent_words(text):
     amount_of_words = 10
-    counter = collections.Counter(list_of_words.split())
+    counter = collections.Counter(text.split())
     return dict(counter.most_common(amount_of_words))
 
 
