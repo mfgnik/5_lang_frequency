@@ -10,7 +10,17 @@ python lang_frequency.py input.txt
 
 Output: 
 
-the he to and of said you a i her
+The most frequent words:
+the
+he
+to
+and
+of
+said
+you
+a
+i
+her
 ```
 
 Explanation of the example:
