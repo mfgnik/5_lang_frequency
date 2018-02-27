@@ -9,10 +9,16 @@ def load_data(filepath):
 
 def get_most_frequent_words(text):
     amount_of_words = 10
-    counter = collections.Counter(text.split())
-    return dict(counter.most_common(amount_of_words))
+    list_of_words = [word for word in text.lower().split() if word.isalpha()]
+    counter = collections.Counter(list_of_words)
+    return counter.most_common(amount_of_words)
 
 
 if __name__ == '__main__':
-    file_path = sys.argv[1]
-    print(*(word for word in get_most_frequent_words(load_data(file_path))))
+    try:
+        file_path = sys.argv[1]
+        print(*(word for word, _ in get_most_frequent_words(load_data(file_path))))
+    except FileNotFoundError:
+        print('No file')
+    except IndexError:
+        print('You did not write the name of file')
