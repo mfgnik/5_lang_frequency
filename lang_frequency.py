@@ -1,6 +1,5 @@
 import collections
 import sys
-import itertools
 
 
 def load_data(filepath):
