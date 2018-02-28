@@ -2,7 +2,7 @@
 
 This program finds ten most frequent words in text
 
-Example of using code on Mac OS. Script is tested on story of Jerome David Salinger "A Perfect Day for Bananafish" http://ae-lib.org.ua/salinger/Texts/N1-Bananafish-en.htm:
+Example of using code on Mac OS. Script is tested on story of Jerome David Salinger ["A Perfect Day for Bananafish"](http://ae-lib.org.ua/salinger/Texts/N1-Bananafish-en.htm):
 
 ```bash
 cd PycharmProjects/Devman
@@ -11,20 +11,17 @@ python lang_frequency.py input.txt
 Output: 
 
 The most frequent words:
-the
-he
-to
-and
-of
-said
-you
-a
-i
-her
+1 the
+2 he
+3 to
+4 and
+5 of
+6 said
+7 you
+8 a
+9 i
+10 her
 ```
-
-Explanation of the example:
-We should open the folder, where our script is situated and write after python name of scriipt and name of file with text.
 
 # Project Goals
 
