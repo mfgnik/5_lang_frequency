@@ -1,5 +1,6 @@
 import collections
 import sys
+import itertools
 
 
 def load_data(filepath):
@@ -20,7 +21,8 @@ if __name__ == '__main__':
         file_path = sys.argv[1]
         most_frequent_words = get_most_frequent_words(load_data(file_path))
         print('The most frequent words:')
-        print(*(word for word, _ in most_frequent_words), sep='\n')
+        for book in enumerate((word for word, _ in most_frequent_words), 1):
+            print(*book)
     except FileNotFoundError:
         print('No file')
     except IndexError:
